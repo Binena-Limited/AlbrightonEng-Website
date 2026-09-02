@@ -11442,3 +11442,37 @@ img {
 
 /* Team page uses the original Albrighton profiles from the former About page. */
 .team-page .about-team-section .team-wrap .row>div:nth-child(n+5){display:none}.team-page .about-team-section .social-links{display:none!important}.team-page .about-team-section .wpo-section-title p{max-width:760px;margin:18px auto 0;color:#68736f;line-height:1.7}.team-page .about-team-section .team-card .text h2{margin:0;color:#073f35}
+
+/* Keep the shared navigation visible on every page and viewport. */
+#header{position:-webkit-sticky;position:sticky;top:0;z-index:99990;background:#fff;box-shadow:0 4px 18px rgba(5,45,38,.09)}
+#header .wpo-site-header{background:#fff}
+.page-wrapper{overflow:visible;overflow-x:clip}
+
+/* Compact modern navigation dimensions. */
+@media(min-width:992px){
+  #header .wpo-site-header{padding-left:32px;padding-right:24px}
+  #header .wpo-site-header .navigation{height:84px;min-height:84px}
+  #header .wpo-site-header .navigation .container-fluid,#header .wpo-site-header .navigation .row{height:100%}
+  #header .wpo-site-header .navigation .row{align-items:center!important}
+  #header .wpo-site-header #navbar>ul>li>a{padding:29px 15px;font-size:15px;line-height:26px}
+  #header .wpo-site-header .navbar-header{height:84px;display:flex;align-items:center;justify-content:center}
+  #header .wpo-site-header .navbar-header .navbar-brand{padding:0;margin:0}
+  #header .wpo-site-header .navbar-header .navbar-brand img{display:block;width:72px;height:72px;max-width:72px;object-fit:contain}
+  #header .wpo-site-header .header-right .close-form .theme-btn-s2{padding:11px 24px;font-size:14px;border-radius:999px}
+  #header .wpo-site-header .header-right .search-toggle-btn{width:48px;height:48px;border-radius:50%}
+}
+@media(max-width:991px){
+  #header,#header .wpo-site-header{min-height:64px}
+  #header .wpo-site-header .navigation{min-height:64px;padding:0 12px}
+  #header .wpo-site-header .navbar-header{height:64px;display:flex;align-items:center;justify-content:center}
+  #header .wpo-site-header .navbar-header .navbar-brand{padding:0;margin:0}
+  #header .wpo-site-header .navbar-header .navbar-brand img{width:48px;height:48px;max-width:48px;object-fit:contain}
+  body.mobile-app-shell #header,body.mobile-app-shell .wpo-site-header{height:64px!important;min-height:64px!important;max-height:64px!important}
+  body.mobile-app-shell .wpo-site-header .navigation{height:64px!important;min-height:64px!important;max-height:64px!important}
+  body.mobile-app-shell .navbar-header{height:64px!important}
+  body.mobile-app-shell .navbar-header .navbar-brand img{width:48px!important;height:48px!important;max-width:48px!important}
+  body.mobile-app-shell .mobile-app-action{top:10px;width:42px;height:42px}
+  body.mobile-app-shell .mobile-app-action{position:absolute;overflow:hidden;background:#4caf50!important;color:#fff!important;box-shadow:0 5px 14px rgba(76,175,80,.3);padding:0;border-radius:50%}
+  body.mobile-app-shell .mobile-app-action img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+  body.mobile-app-shell .mobile-app-title strong{font-size:17px}
+}

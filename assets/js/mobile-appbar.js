@@ -22,17 +22,11 @@
 
     var navigation = document.querySelector('.wpo-site-header .navigation');
     if (navigation && !navigation.querySelector('.mobile-app-action')) {
-        var action = document.createElement(page === 'shop.html' ? 'button' : 'a');
+        var action = document.createElement('a');
         action.className = 'mobile-app-action';
-        action.setAttribute('aria-label', page === 'shop.html' ? 'Book a service' : 'Call Albrighton Engineering');
-        if (page !== 'shop.html') action.href = 'tel:+256776105168';
-        action.innerHTML = '<i class="' + (page === 'shop.html' ? 'ti-calendar' : 'ti-headphone-alt') + '"></i>';
+        action.setAttribute('aria-label', 'Call Albrighton support on 0776 105 168');
+        action.href = 'tel:+256776105168';
+        action.innerHTML = '<img src="assets/images/Albrigton_Images/mobile-support-call.png" alt="">';
         navigation.appendChild(action);
-        if (page === 'shop.html') action.addEventListener('click', function () {
-            var tab = document.querySelector('.commerce-tab[data-tab="services"]');
-            if (tab) tab.click();
-            var trigger = document.querySelector('.open-service-modal');
-            if (trigger) trigger.click();
-        });
     }
 })();
